@@ -1,0 +1,35 @@
+.nav {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+.container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.container::-webkit-scrollbar {
+  display: none;
+}
+.euclid {
+  font-family: "EuclidRegular";
+}
+.euclidMedium {
+  font-family: "EuclidRegular";
+}
+.teamLogo {
+  width: fit-content;
+}
+
+
+.control-dots {
+  margin: -27px 0 !important;
+}
+
+.carousel-slider {
+  overflow: visible !important;
+}
+
+.rounded-background {
+  clip-path: polygon(50% 0, 100% 25%, 100% 25%, 50% 50%, 0% 25%);
+}
