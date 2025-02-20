@@ -6,14 +6,12 @@ export const euclid = localFont({
     src: [
         {
             path: "../../public/Fonts/EuclidMedium.ttf",
-            weight: "400"
-            ,
-            style: "medium"
+            weight: "400",
+            style: "normal"
         },
         {
             path: "../../public/Fonts/EuclidRegular.ttf",
-            weight: "400"
-            ,
+            weight: "500",
             style: "normal"
         }
     ]

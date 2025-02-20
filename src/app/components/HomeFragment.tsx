@@ -5,7 +5,7 @@ import { LiveMatch as LiveMatchType, Series } from "../page";
 import { UpcomingMatch } from "./UpcomingMatch";
 import MyCarousel from "./MyCarousel";
 import Logo from "@/app/favicon.png";
-import { roboto } from "../fonts";
+import { euclid, roboto } from "../fonts";
 
 interface HomeProps {
   upcomingMatches: LiveMatchType[];
@@ -19,10 +19,14 @@ export default function HomeFragment({
   series,
 }: HomeProps) {
   return (
-    <div className={`w-full top-8 font-[Roboto]  relative ${roboto.className}`}>
-      <div className="fixed overflow-hidden top-0 w-[375px]  margin-0 bg z-10 flex self-center text-white justify-center flex-col items-center">
-        <div className="flex justify-between w-full">
-          <div className="p-4 euclidMedium items-center flex flex-row">
+    <div
+      className={`w-full top-8 relative ${roboto.className} overflow-scroll`}
+    >
+      <div className="fixed top-0 w-[375px] backdrop-blur-sm  margin-0  z-10 flex self-center text-white justify-center flex-col items-center">
+        <div
+          className={`flex ${euclid.className} font-medium justify-between w-full px-10 `}
+        >
+          <div className="p-4  items-center flex flex-row">
             <p className="text-xl">C</p>
             ricSpin
           </div>
@@ -34,14 +38,16 @@ export default function HomeFragment({
             alt="Cricspin"
             className="w-[60px] cursor-pointer"
           />
-          <div className="p-4 euclidMedium items-center flex flex-row">
+          <div
+            className={`p-4 ${euclid.className} font-medium items-center flex flex-row`}
+          >
             <p className="text-xl">L</p>iveLine
           </div>
         </div>
-        <div className="w-full mt-1 h-[1px] bg-gray-300 "></div>
+        <div className="w-full m-w  h-[1px] bg-gray-300 "></div>
       </div>
 
-      <div className="w-full pl-4 top-8 font-[Roboto] ov relative">
+      <div className="  top-8 mx-3 relative">
         <a href="/live" className="w-full justify-between flex no-underline">
           <h6 className="items-center justify-center text-white m-2">
             Live Matches

@@ -27,13 +27,9 @@ export const LiveMatchItem: React.FC<LiveMatchItemProps> = ({ match }) => {
     try {
       parsedJson = JSON.parse(sanitizedJsonData).jsondata;
     } catch (error) {
-      console.error("Error parsing JSON data:", error);
-      return;
     }
     jsonData = parsedJson;
-  } catch (error) {
-    console.error("Error fetching data:", error);
-  }
+  } catch (error) {}
 
   const currentDate = new Date();
   const day = String(currentDate.getDate()).padStart(2, "0");
@@ -45,7 +41,6 @@ export const LiveMatchItem: React.FC<LiveMatchItemProps> = ({ match }) => {
   try {
     convertedDate = convertDateFormat(match.Matchtime.trim()?.split("at")[0]);
   } catch (e) {
-    return null; 
   }
 
   function convertDateFormat(inputDate: string): string {
